@@ -1,0 +1,269 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    color: white;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+}
+
+/* --- GAYA UNTUK FOTO DI NAVBAR --- */
+.logo {
+    display: flex;         /* Membuat foto dan teks sejajar horisontal */
+    align-items: center;    /* Membuat foto dan teks rata tengah secara vertikal */
+    gap: 10px;             /* Memberi jarak antara foto dan teks */
+}
+
+.nav-profile-img {
+    width: 35px;           /* Ukuran lebar foto, sesuaikan agar pas */
+    height: 35px;          /* Ukuran tinggi foto, harus sama dengan lebar */
+    border-radius: 50%;    /* Membuat foto menjadi lingkaran sempurna */
+    object-fit: cover;     /* Memastikan foto tidak gepeng */
+    border: 2px solid white; /* Memberi ring putih tipis agar estetik */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffd369;
+}
+
+/* SECTION */
+.section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    opacity: 0.9;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: #333;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white !important;
+    color: #764ba2 !important;
+    transform: scale(1.05);
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* CARD */
+
+.card img {
+    width: 100%;          /* Gambar memenuhi lebar kartu */
+    height: 200px;         /* Tinggi tetap agar semua kartu seragam */
+    object-fit: cover;     /* Gambar tidak gepeng, otomatis terpotong rapi */
+    margin: 0 auto 20px auto; /* Menambah 'auto' di kiri & kanan untuk menengahkah */
+    display: block;      /* Penting agar margin auto berfungsi */
+    border-radius: 12px;   /* Sudut gambar melengkung halus */
+    margin-bottom: 20px;   /* Jarak antara gambar dan judul teks */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Bingkai tipis transparan */
+    transition: 0.3s;      /* Animasi halus saat hover */
+    object-position: center 40%; /* Ini akan menarik tampilan gambar ke arah atas (sehingga orangnya terlihat turun) */
+}
+
+.card {
+    background: rgba(255,255,255,0.15);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: rgba(255,255,255,0.25);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0,0,0,0.2);
+    margin-top: 40px;
+}
+
+/* CONTAINER BIODATA */
+.profile-card {
+    background: rgba(255, 255, 255, 0.15); /* Efek transparan */
+    backdrop-filter: blur(10px);           /* Efek blur kaca */
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* FOTO PROFIL */
+.profile-img-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Membuat foto jadi bulat */
+    overflow: hidden;
+    border: 4px solid #1c5288; /* Memberi ring warna agar menonjol */
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT DETAILS */
+.profile-details h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+}
+
+.info-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: left;
+    gap: 20px;
+}
+
+.label {
+    font-weight: bold;
+    color: #4e0780; /* Warna aksen sesuai hover navigasi kamu */
+    width: 120px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.value {
+    color: white;
+    opacity: 0.9;
+    flex: 1;
+}
+
+/* KHUSUS HERO HOME */
+.hero-home {
+    height: 120vh; /* Mengisi sebagian besar layar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    animation: fadeInDown 1s ease-out;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* TOMBOL TAMBAHAN */
+.home-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-outline {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 30px;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    color: #333;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-outline:hover {
+    background: white !important;
+    color: #764ba2 !important;
+}
+
+/* ANIMASI SEDERHANA */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
