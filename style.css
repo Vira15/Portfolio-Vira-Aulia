@@ -267,3 +267,103 @@ footer {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* --- GAYA KHUSUS ARTIKEL PANJANG KE SAMPING --- */
+
+.artikel-container {
+    max-width: 1000px; /* Batas lebar agar teks tidak terlalu lelah dibaca */
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: left; /* Teks rata kiri agar natural */
+}
+
+.full-width-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    width: 100%; /* Ini kunci agar panjang ke samping */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+}
+
+.full-width-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(10px); /* Efek geser sedikit ke kanan saat di-hover */
+}
+
+.artikel-container h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    border-left: 5px solid #ffd369; /* Garis kuning di samping judul agar estetik */
+    padding-left: 15px;
+}
+
+.artikel-container p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Style khusus untuk Studi Kasus agar beda sendiri */
+.case-study-box {
+    background: linear-gradient(45deg, rgba(255, 154, 158, 0.2), rgba(250, 208, 196, 0.2));
+    border: 2px dashed #ffd369;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 40px;
+}
+
+/* CONTAINER UTAMA ARTIKEL */
+.artikel-wrapper {
+    max-width: 900px;           /* Membatasi lebar teks agar tidak mentok ke pinggir */
+    margin: 50px auto;          /* Menengahkan artikel */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1); /* Kotak transparan tipis */
+    backdrop-filter: blur(15px); /* Efek kaca blur */
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    text-align: left;           /* Teks rata kiri agar enak dibaca */
+}
+
+/* JUDUL & SUBJUDUL */
+.artikel-wrapper h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #ffd369;             /* Warna kuning agar kontras */
+}
+
+.artikel-wrapper h2 {
+    color: #ffd369;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+/* POINT-POINT LIST */
+.artikel-wrapper ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.artikel-wrapper li {
+    background: rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+/* KHUSUS STUDI KASUS */
+.studi-kasus-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    border-left: 5px solid #ff9a9e;
+}
