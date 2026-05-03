@@ -367,3 +367,187 @@ footer {
     margin-top: 30px;
     border-left: 5px solid #ff9a9e;
 }
+
+/* Container utama untuk artikel agar rapi di tengah */
+.article-container {
+    max-width: 900px;
+    margin: 100px auto 40px; /* Jarak atas untuk nav, margin otomatis untuk tengah */
+    padding: 20px;
+    color: white; /* Warna tulisan utama tetap putih agar kontras dengan ungu */
+}
+
+/* Header Artikel */
+.article-header h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Agar tulisan lebih tegas */
+}
+
+/* Bagian Abstrak */
+.abstract {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px; /* Ditambah agar teks tidak mepet ke pinggir kotak */
+    border-radius: 10px;
+    border-left: 5px solid #ff7eb3;
+    margin-bottom: 40px; /* Memberi jarak lebih ke poin di bawahnya */
+    
+    /* Pengaturan Jarak Tulisan */
+    line-height: 1.8; /* Mengatur jarak antar baris agar lebih renggang */
+    letter-spacing: 0.5px; /* Memberi sedikit ruang antar huruf agar tidak rapat */
+    text-align: justify; /* Membuat teks rata kanan-kiri agar terlihat rapi secara profesional */
+}
+
+.abstract h3 {
+    margin-bottom: 15px; /* Memberi jarak antara judul 'Abstrak' dengan isi teksnya */
+    font-size: 1.4rem;
+    color: #f073a7; /* Menyamakan warna judul abstrak dengan garis pinggir */
+}
+
+/* Styling Judul yang bisa diklik (Summary) */
+summary {
+    list-style: none; /* Menghilangkan panah bawaan */
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.2); /* Latar belakang lebih gelap sedikit dari ungu asli */
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    transition: background 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efek terang saat kursor di atasnya */
+}
+
+/* Menambah simbol + manual di sebelah kanan */
+summary::after {
+    content: '▶';
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+details[open] summary::after {
+    transform: rotate(90deg); /* Panah berputar saat dibuka */
+}
+
+/* Kotak Isi Materi (Muncul saat diklik) */
+.isi-materi {
+    background: white; /* Latar belakang putih agar teks hitam sangat mudah dibaca */
+    color: #333; /* Warna teks isi materi menjadi gelap */
+    padding: 25px;
+    border-radius: 0 0 10px 10px;
+    margin-top: -5px; /* Menempel dengan summary di atasnya */
+    line-height: 1.7;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.isi-materi h3 {
+    color: #5d54a4; /* Warna judul sub-poin mengikuti tema ungu */
+    margin-top: 15px;
+}
+
+/* Merapikan List di dalam isi */
+.isi-materi ul, .isi-materi ol {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.isi-materi li {
+    margin-bottom: 8px;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between; /* Ini yang membuat satu di kiri dan satu di kanan */
+    align-items: center;
+    width: 100%;
+    max-width: 900px; /* Sesuaikan dengan lebar artikel Anda */
+    margin: 40px auto; /* Memberi jarak atas dan bawah serta rata tengah */
+}
+
+/* Opsional: Agar tampilan tombol tetap konsisten dengan desain Anda sebelumnya */
+.btn {
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 20px;
+    background-color: #ffb3ba; /* Warna pink lembut seperti di gambar */
+    color: #333;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Container khusus model baru */
+.article-container-new {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 20px;
+    color: white;
+}
+
+/* Membuat dua gambar sejajar (Grid) */
+.evidence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi dua kolom sama besar */
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.evidence-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Agar gambar tidak gepeng */
+    border-radius: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s;
+}
+
+.evidence-item img:hover {
+    transform: scale(1.02);
+}
+
+.caption {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #ffb3ba;
+}
+
+/* Bagian Opini */
+.opinion-section {
+    margin-top: 50px;
+}
+
+.opinion-card {
+    background: white;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    line-height: 1.8;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.my-opinion {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 4px solid #5d54a4;
+    background: #f4f4f9;
+    font-style: italic;
+}
+
+/* Responsif untuk HP agar gambar jadi tumpuk vertikal */
+@media (max-width: 600px) {
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+}
