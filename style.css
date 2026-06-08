@@ -551,3 +551,102 @@ details[open] summary::after {
         grid-template-columns: 1fr;
     }
 }
+
+/* ==========================================================================
+   CSS KHUSUS HALAMAN POSTER ARTIKEL 6 (VERSI MINIMALIS & MATCHING)
+   ========================================================================== */
+
+.page-poster-body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    
+    /* Mengaktifkan susunan vertikal ke tengah */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important; /* Membuat footer bar nempel di paling bawah */
+    align-items: center !important;
+    
+    /* Gradasi ungu sesuai layout web kamu */
+    background: linear-gradient(135deg, #6253ca 0%, #a496f2 50%, #dfd9ff 100%) !important;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Container utama pembungkus poster & tombol agar menggantung pas di tengah */
+.main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Container poster: KOTAK PUTIH DIHILANGKAN */
+.page-poster-body .poster-wrapper {
+    background-color: transparent !important; /* Menghapus background putih */
+    box-shadow: none !important;             /* Menghapus bayangan kotak putih */
+    
+    /* Menjaga ukuran gambar agar pas di layar monitor */
+    max-width: 480px; 
+    width: 100%;
+    max-height: 70vh; 
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px auto !important; 
+}
+
+/* Mengatur gambar poster agar tetap tajam dan punya lengkungan halus */
+.page-poster-body .poster-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px; /* Memberikan efek tumpul di ujung poster asli agar rapi */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Efek bayangan tipis pada posternya saja */
+}
+
+/* Styling Tombol Kembali - Dibuat warna peach sesuai gambar kedua */
+.page-poster-body .btn-kembali {
+    display: inline-block;
+    color: #333333 !important; /* Warna teks gelap agar terbaca jelas */
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 0.95rem;
+    background-color: #fca390; /* Warna peach pastel sesuai gambar kedua */
+    padding: 12px 35px;
+    border-radius: 25px; /* Membuat bentuk kapsul bulat lonjong */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+
+.page-poster-body .btn-kembali:hover {
+    background-color: #f78b74; /* Warna sedikit lebih gelap saat disentuh cursor */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Bar Footer Gelap di bagian paling bawah layar sesuai gambar kedua */
+.page-poster-body .footer-bar {
+    width: 100%;
+    background-color: rgba(43, 31, 102, 0.4); /* Background ungu transparan gelap */
+    padding: 15px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Teks hak cipta di dalam bar bawah */
+.page-poster-body .footer-text {
+    color: #ffffff;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
